@@ -532,10 +532,10 @@ public class MainActivity extends AppCompatActivity {
             SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPreffb", MODE_PRIVATE);
             userId = pref.getString("user_id", null);
 
-            /*category_exist_request.setRetryPolicy(new DefaultRetryPolicy(
+            category_exist_request.setRetryPolicy(new DefaultRetryPolicy(
                     MY_SOCKET_TIMEOUT_MS,
                     DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-                    DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));*/
+                    DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
 
 
             RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
@@ -585,7 +585,7 @@ public class MainActivity extends AppCompatActivity {
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 ft.setCustomAnimations(R.animator.fragment_slide_left_enter, R.animator.fragment_slide_left_exit, R.animator.fragment_slide_right_enter, R.animator.fragment_slide_right_exit).show(getFragmentManager().findFragmentById(R.id.gettingStarted)).commit();
             }
-        }, 500);
+        }, 0);
 
 
         View v=getFragmentManager().findFragmentById(R.id.gettingStarted).getView();
@@ -598,7 +598,7 @@ public class MainActivity extends AppCompatActivity {
                         FragmentTransaction ft = getFragmentManager().beginTransaction();
                         ft.setCustomAnimations(R.animator.fragment_slide_left_enter, R.animator.fragment_slide_left_exit, R.animator.fragment_slide_right_enter, R.animator.fragment_slide_right_exit).hide(getFragmentManager().findFragmentById(R.id.gettingStarted)).commit();
                     }
-                }, 500);
+                }, 0);
             }
         });
 
@@ -810,10 +810,10 @@ public class MainActivity extends AppCompatActivity {
             SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPreffb", MODE_PRIVATE);
             userId = pref.getString("user_id", null);
 
-            /*category_exist_request.setRetryPolicy(new DefaultRetryPolicy(
+            category_exist_request.setRetryPolicy(new DefaultRetryPolicy(
                     MY_SOCKET_TIMEOUT_MS,
                     DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-                    DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));*/
+                    DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
 
 
             RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());

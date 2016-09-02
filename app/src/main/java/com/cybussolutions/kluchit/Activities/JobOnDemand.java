@@ -23,6 +23,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -62,6 +63,7 @@ public class JobOnDemand extends AppCompatActivity {
     boolean created;
     String userId=null;
     private Toolbar toolbar;
+    private static final int MY_SOCKET_TIMEOUT_MS = 10000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -301,6 +303,11 @@ public class JobOnDemand extends AppCompatActivity {
             }
         };
 
+        stringRequest.setRetryPolicy(new DefaultRetryPolicy(
+                MY_SOCKET_TIMEOUT_MS,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
 
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
         requestQueue.add(stringRequest);
@@ -365,6 +372,12 @@ public class JobOnDemand extends AppCompatActivity {
                 return params;
             }
         };
+
+        stringRequest.setRetryPolicy(new DefaultRetryPolicy(
+            MY_SOCKET_TIMEOUT_MS,
+            DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+            DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
 
         ringProgressDialog = ProgressDialog.show(JobOnDemand.this, "Please wait ...", "Closing job ...", true);
         ringProgressDialog.setCancelable(false);

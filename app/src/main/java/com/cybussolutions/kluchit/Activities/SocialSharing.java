@@ -1130,7 +1130,7 @@ public class SocialSharing extends FragmentActivity {
                 R.drawable.log_six_a
         };
 
-        Bitmap bm = rotateImage(BitmapFactory.decodeResource(getResources(), imageId[logo_index]),-270);
+        Bitmap bm = rotateImage(BitmapFactory.decodeResource(getResources(), imageId[logo_index]),-90);
         String extStorageDirectory = Environment.getExternalStorageDirectory().toString() + "/Pictures/Kluchit Camera";
         File file = new File(extStorageDirectory, "watermark_vid.PNG");
         FileOutputStream outStream = null;
@@ -1192,13 +1192,13 @@ public class SocialSharing extends FragmentActivity {
                 abc=fileUri.getPath();
 
 
-                new Handler().postDelayed(new Runnable() {
+              /*  new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         FragmentTransaction ft = getFragmentManager().beginTransaction();
                         ft.setCustomAnimations(R.animator.fragment_slide_left_enter, R.animator.fragment_slide_left_exit, R.animator.fragment_slide_right_enter, R.animator.fragment_slide_right_exit).show(getFragmentManager().findFragmentById(R.id.two)).commit();
                     }
-                }, 10);
+                }, 10);*/
 
 
                 show_editing_controls();
@@ -1277,8 +1277,8 @@ public class SocialSharing extends FragmentActivity {
                // new Handler().postDelayed(new Runnable() {
                 //    @Override
                 //    public void run() {
-                        FragmentTransaction ft = getFragmentManager().beginTransaction();
-                        ft.setCustomAnimations(R.animator.fragment_slide_left_enter, R.animator.fragment_slide_left_exit, R.animator.fragment_slide_right_enter, R.animator.fragment_slide_right_exit).show(getFragmentManager().findFragmentById(R.id.two)).commit();
+                   //     FragmentTransaction ft = getFragmentManager().beginTransaction();
+                    //    ft.setCustomAnimations(R.animator.fragment_slide_left_enter, R.animator.fragment_slide_left_exit, R.animator.fragment_slide_right_enter, R.animator.fragment_slide_right_exit).show(getFragmentManager().findFragmentById(R.id.two)).commit();
                //     }
                // }, 500);
 
