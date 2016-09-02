@@ -263,8 +263,9 @@
         android:textStyle="bold"
         android:typeface="serif"
         android:textColor="#000"
+        android:layout_marginTop="25dp"
         android:background="@drawable/closejob"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/tableLayout1"
         android:layout_centerHorizontal="true" />
 
 

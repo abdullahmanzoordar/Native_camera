@@ -76,14 +76,13 @@
         android:layout_width="120dp"
         android:layout_height="70dp"
         android:id="@+id/busy"
-        android:layout_marginRight="5dp"
         android:background="@drawable/occupied"
         android:textStyle="bold"
         android:typeface="serif"
         android:textColor="#000"
         android:layout_below="@+id/scrollView3"
-        android:layout_toEndOf="@+id/reject"
-         />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -118,10 +117,8 @@
         android:textStyle="bold"
         android:typeface="serif"
         android:textColor="#000"
-        android:layout_marginTop="29dp"
         android:layout_below="@+id/scrollView3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginRight="15dp" />
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>
