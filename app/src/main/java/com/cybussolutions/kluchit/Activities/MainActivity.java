@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
            // Toast.makeText(MainActivity.this,response,Toast.LENGTH_LONG).show();
             if (response.toString().contains("not")) {
                 ringProgressDialog.dismiss();
-                Toast.makeText(MainActivity.this, response, Toast.LENGTH_LONG).show();
+              //  Toast.makeText(MainActivity.this, response, Toast.LENGTH_LONG).show();
             }
             else {
                 ringProgressDialog.dismiss();
@@ -171,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
             SharedPreferences.Editor editor = pref.edit();
             editor.putString("user_image", response);// Saving string
             editor.commit();
-
+            ringProgressDialog.dismiss();
             Jsonsend();
 
         }
@@ -207,7 +207,7 @@ public class MainActivity extends AppCompatActivity {
     final StringRequest category_exist_request = new StringRequest(Request.Method.POST, checkuser, new Response.Listener<String>() {
         @Override
         public void onResponse(String response) {
-
+            ringProgressDialog.dismiss();
             if (response.contains("not"))
             {
                 String str = response;
@@ -388,9 +388,11 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onErrorResponse(VolleyError error)
                 {
+
+                    ringProgressDialog.dismiss();
                     if(error instanceof NoConnectionError) {
 
-                        ringProgressDialog.dismiss();
+
 
                         Intent intent = new Intent(MainActivity.this,NoInternet.class);
                         startActivity(intent);
@@ -399,7 +401,6 @@ public class MainActivity extends AppCompatActivity {
 
                     else
                     {
-                        ringProgressDialog.dismiss();
 
                         Toast.makeText(getApplication(), error.toString(), Toast.LENGTH_SHORT).show();
 

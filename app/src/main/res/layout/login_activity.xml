@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/userid"
             android:layout_below="@id/imageView"
-            android:layout_marginTop="70dp">
+            android:layout_marginTop="50dp">
 
 
             <EditText
@@ -44,7 +44,7 @@
                 android:inputType="textEmailAddress"
                 android:hint="User Name"
                 android:textColorHint="#9E9E9E"
-                android:layout_marginTop="200dp"
+                android:layout_marginTop="170dp"
                 android:layout_below="@+id/userid"
                 android:layout_alignParentLeft="true"
                 android:typeface="serif" />

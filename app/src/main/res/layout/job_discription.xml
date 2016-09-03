@@ -118,7 +118,8 @@
         android:typeface="serif"
         android:textColor="#000"
         android:layout_below="@+id/scrollView3"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp" />
 
 
 </RelativeLayout>

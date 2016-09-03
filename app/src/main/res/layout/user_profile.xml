@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:id="@+id/firstlayout"
             android:layout_height="210dp"
-            android:background="#b388ff"
+            android:background="@drawable/back3"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             tools:context="com.cybussolutions.kluchit.Activities.User_Profile"
             >
@@ -42,9 +42,11 @@
                 android:id="@+id/userid"
                 android:layout_below="@+id/profile"
                 android:layout_centerVertical="true"
-                android:textColor="#000"
+                android:textColor="#FFFF"
                 android:layout_marginLeft="20dp"
-                android:layout_marginBottom="20dp" />
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                android:typeface="serif" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -52,7 +54,7 @@
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="Total Jobs "
                 android:id="@+id/textView3"
-                android:textColor="#000"
+                android:textColor="#FFFF"
                 android:textStyle="bold"
                 android:typeface="serif"
 
@@ -64,14 +66,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="total"
                 android:id="@+id/total"
-                android:textSize="15sp"
-                android:textColor="#000"
+                android:textSize="20sp"
+                android:textColor="#FFFF"
                 android:layout_below="@+id/textView3"
                 android:layout_centerInParent="true"
                 android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
                 android:textStyle="bold" />
 
             <com.github.siyamed.shapeimageview.CircularImageView
@@ -91,9 +91,10 @@
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="Current Jobs "
                 android:id="@+id/textView8"
-                android:textColor="#000"
+                android:textColor="#FFFF"
                 android:textStyle="bold"
                 android:typeface="serif"
+                android:layout_centerInParent="true"
                 android:layout_marginLeft="5dp"
                 android:layout_alignTop="@+id/textView3"
                 android:layout_toEndOf="@+id/textView3"
@@ -103,12 +104,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="current"
                 android:id="@+id/current"
-                android:textSize="15sp"
-                android:textColor="#000"
-                android:layout_marginRight="10dp"
-                android:layout_marginStart="29dp"
+                android:textSize="20sp"
+                android:textColor="#FFFF"
+                android:layout_marginStart="35dp"
                 android:layout_alignTop="@+id/total"
                 android:layout_alignStart="@+id/textView8"
                 android:textStyle="bold" />
@@ -125,13 +124,21 @@
             tools:context="com.cybussolutions.kluchit.Activities.User_Profile"
             >
 
+            <ListView
+                android:id="@+id/list_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="#584595"
+                android:dividerHeight="2dp"
+                />
             <ImageView
-                android:layout_width="300dp"
-                android:layout_height="260dp"
+                android:layout_width="320dp"
+                android:layout_height="280dp"
                 android:id="@+id/nojobimage"
+               android:layout_centerInParent="true"
+                android:visibility="invisible"
                 android:background="@drawable/nojobs"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true" />
+                />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -140,6 +147,7 @@
                 android:id="@+id/jobs_title"
                 android:textAlignment="center"
                 android:textColor="#000"
+                android:visibility="invisible"
                 android:textStyle="bold"
                 android:typeface="serif"
                 android:textSize="14dp"

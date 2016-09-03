@@ -61,7 +61,7 @@ public class JobOnDemand extends AppCompatActivity {
     EditText venue;
     Button submit;
     boolean created;
-    String userId=null;
+    String userId=null,userCategory;
     private Toolbar toolbar;
     private static final int MY_SOCKET_TIMEOUT_MS = 10000;
 
@@ -286,7 +286,8 @@ public class JobOnDemand extends AppCompatActivity {
 
                 SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
                 userId = pref.getString("user_id", null);
-
+                userCategory = pref.getString("user_cat",null);
+                params.put("category",userCategory);
                 params.put("added_by",userId);
                 String date_modified = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(new Date());
                 params.put("date_modified",date_modified);

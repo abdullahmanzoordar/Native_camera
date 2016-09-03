@@ -55,8 +55,6 @@
             android:id="@+id/listView2"
             android:divider="#584595"
             android:dividerHeight="2dp"
-            android:listSelector="#758189"
-            android:cacheColorHint="#758189"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/app_bar"

@@ -127,9 +127,8 @@ public class DrawerFragment extends Fragment {
 
                                             SharedPreferences pref=getActivity().getSharedPreferences("JobOnDemand", Context.MODE_PRIVATE);
                                             SharedPreferences.Editor editor=pref.edit();
-                                            editor.putString("Status","inactive");
+                                            editor.clear();
                                             editor.commit();
-
 
 
                                             close_job();
